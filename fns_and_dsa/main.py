@@ -14,7 +14,7 @@ def main():
 
         if choice == '1':
             # Prompt for and add an item
-            item_name = input("Enter the item name: ")
+            item_name = input("Enter the item to add: ")
             shopping_list_manager.append(item_name)
             pass
         elif choice == '2':
