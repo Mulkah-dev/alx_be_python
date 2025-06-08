@@ -1,36 +1,15 @@
-import shopping_list_manager
+#import arithmetic_operations
 
-def display_menu():
-    print("Shopping List Manager")
-    print("1. Add Item")
-    print("2. Remove Item")
-    print("3. View List")
-    print("4. Exit")
+from arithmetic_operations import perform_operation
 
 def main():
-    while True:
-        display_menu()
-        choice = input("Enter your choice: ")
+    print("Arithmetic Operations")
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
 
-        if choice == '1':
-            # Prompt for and add an item
-            item_name = input("Enter the item to add: ")
-            shopping_list_manager.append(item_name)
-            pass
-        elif choice == '2':
-            # Prompt for and remove an item
-            item_name = input("Enter the item name yo want to remove: ")
-            shopping_list_manager.remove(item_name)
-            pass
-        elif choice == '3':
-            # Display the shopping list
-            print(shopping_list_manager.print_list())
-            pass
-        elif choice == '4':
-            print("Goodbye!")
-            break
-        else:
-            print("Invalid choice. Please try again.")
+    result = perform_operation(num1, num2, operation)
+    print(f"Result: {result}")
 
 if __name__ == "__main__":
     main()
