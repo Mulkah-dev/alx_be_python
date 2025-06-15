@@ -3,12 +3,9 @@ class Book:
         self.title = title
         self.author = author
         self._is_checked_out = _is_checked_out
-
-    def get_checked_out(self):
-        return self._is_checked_out
     
-    def set_checked_out(self, value):
-        self._is_checked_out = value
+    def return_book(self):
+        return self._is_checked_out
 
 class Library:
     def __init__(self):
