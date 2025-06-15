@@ -43,7 +43,7 @@ class Library:
                 else:
                     print(f"{title} was never checked out")
         if not found:
-            print(f"{title} not found")
+            print(f"{book.title} not found")
 
     def list_available_books(self):
         found = False
