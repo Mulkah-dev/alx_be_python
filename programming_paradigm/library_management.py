@@ -32,7 +32,7 @@ class Library:
         if not found:
             print(f"{title} not found in the library")
 
-    def return_book(self,title):
+    def return_book(self, title):
         found = False
         for book in self._books:
             if book.title == title:
@@ -40,8 +40,8 @@ class Library:
                 if book.get_checked_out():
                     book.set_checked_out(False)
                     #print(f"{title} has been returned successfully")
-                else:
-                    print(f"{title} was never checked out")
+                #else:
+                    #print(f"{title} was never checked out")
         if not found:
             print(f"{book.title} not found")
 
